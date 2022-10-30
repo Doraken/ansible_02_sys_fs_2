@@ -1,0 +1,13 @@
+- name: "system_02_file_system | unmount the lv {{ LV_VAR }} on /mnt/var "
+  mount:
+      path: "/mnt/var"
+      src: "/dev/{{ VG_Name }}/{{ LV_VAR }}"
+      fstype: "xfs"
+      state: "unmounted"
+
+- name: "system_02_file_system | mount the lv {{ LV_VAR }} on {{ LV_VAR_MNT }}"
+  mount:
+      path: "{{ LV_VAR_MNT }}"
+      src: "/dev/{{ VG_Name }}/{{ LV_VAR }}"
+      fstype: "xfs"
+      state: "mounted"

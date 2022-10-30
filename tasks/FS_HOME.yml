@@ -1,0 +1,13 @@
+- name: "system_02_file_system | mount the lv {{ LV_HOME }} on {{ LV_HOME_MNT }}"
+  mount:
+      path: "/mnt/home"
+      src: "/dev/{{ VG_Name }}/{{ LV_HOME }}"
+      fstype: "xfs"
+      state: "unmounted"
+
+- name: "system_02_file_system | mount the lv {{ LV_HOME }} on {{ LV_HOME_MNT }}"
+  mount:
+      path: "{{ LV_HOME_MNT }}"
+      src: "/dev/{{ VG_Name }}/{{ LV_HOME }}"
+      fstype: "xfs"
+      state: "mounted"

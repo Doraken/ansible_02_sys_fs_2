@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  author: "Arnaud Crampet"
+  description: "Ansible role to apply Ubuntu 20.04 cast files system template"
+  company: "none"
+  license: MIT
+  min_ansible_version: 1.0
+  role_name: sys_02_fs_2
+  namespace: doraken
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - focal
+
+  galaxy_tags:
+    - system
+    - filesystem

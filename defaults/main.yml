@@ -1,0 +1,16 @@
+---
+# playbook made by Arnaud Crampet 
+VG_private: "/dev/sda4"
+VG_Name: "VG_DATA"
+
+LV_LOG: "LV_LOG_01"
+LV_LOG_SIZE: "10g"
+LV_LOG_MNT: "/var/log"
+
+LV_VAR: "LV_VAR_01"
+LV_VAR_SIZE: "10g"
+LV_VAR_MNT: "/var"
+
+LV_HOME: "LV_HOME_01"
+LV_HOME_SIZE: "4g"
+LV_HOME_MNT: "/home"
