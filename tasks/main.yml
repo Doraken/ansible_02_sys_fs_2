@@ -26,6 +26,12 @@
       - fs_tasks
       - always
 
+- include: FS_CLEAN.yml
+  become: true
+  tags:
+      - fs_tasks
+      - always
+
 - include: reboot.yml
   become: true
   tags:

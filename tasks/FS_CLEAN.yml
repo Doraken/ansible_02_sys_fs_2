@@ -1,0 +1,20 @@
+- name: "system_02_file_system | Ceaning mount point for home"
+  mount:
+      path: "/mnt/home"
+      src: "/dev/{{ VG_Name }}/{{ LV_HOME }}"
+      fstype: "xfs"
+      state: "unmounted"
+
+- name: "system_02_file_system | Ceaning mount point for var"
+  mount:
+      path: "/mnt/var"
+      src: "/dev/{{ VG_Name }}/{{ LV_VAR }}"
+      fstype: "xfs"
+      state: "unmounted"
+
+- name: "system_02_file_system | Ceaning mount point for log"
+  mount:
+      path: "/mnt/log"
+      src: "/dev/{{ VG_Name }}/{{ LV_LOG }}"
+      fstype: "xfs"
+      state: "unmounted"
